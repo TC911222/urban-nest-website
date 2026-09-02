@@ -29,7 +29,7 @@ export function renderPropertyCard(property) {
     </div>
     <div class="property-card-body">
       <span class="property-type-tag">${capitalize(property.type)}</span>
-      <h3><a href="property-details.html?id=${property.id}">${escapeAttr(property.title)}</a></h3>
+      <h3><a href="/properties/${property.id}.html">${escapeAttr(property.title)}</a></h3>
       <p class="property-location">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
         ${escapeAttr(property.location.area)}, ${escapeAttr(property.location.city)}
@@ -46,7 +46,7 @@ export function renderPropertyCard(property) {
       }
       <p class="property-desc">${escapeAttr(truncate(property.description, 90))}</p>
       <div class="property-card-footer">
-        <a href="property-details.html?id=${property.id}" class="btn btn-dark-outline btn-block btn-sm">View Property</a>
+        <a href="/properties/${property.id}.html" class="btn btn-dark-outline btn-block btn-sm">View Property</a>
       </div>
     </div>
   `;
@@ -58,7 +58,9 @@ export function renderPropertyCard(property) {
   favBtn.addEventListener("click", () => {
     const active = favBtn.classList.toggle("active");
     favBtn.setAttribute("aria-pressed", String(active));
-    favBtn.querySelector("i").className = active ? "fa-solid fa-heart" : "fa-regular fa-heart";
+    favBtn.querySelector("i").className = active
+      ? "fa-solid fa-heart"
+      : "fa-regular fa-heart";
   });
 
   return card;

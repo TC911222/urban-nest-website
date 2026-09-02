@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.example.com/</loc></url>
+  <url><loc>https://www.example.com/properties.html</loc></url>
+  <url><loc>https://www.example.com/about.html</loc></url>
+  <url><loc>https://www.example.com/contact.html</loc></url>
+  <url><loc>https://www.example.com/properties/property-001.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-002.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-003.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-004.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-005.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-006.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-007.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-008.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-009.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-010.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-011.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/properties/property-012.html</loc><priority>0.8</priority></url>
+</urlset>

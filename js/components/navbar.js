@@ -5,12 +5,11 @@
  */
 
 const NAV_LINKS = [
-  { label: "Home", href: "index.html", match: "index.html" },
-  { label: "Properties", href: "properties.html", match: "properties.html" },
-  { label: "About", href: "about.html", match: "about.html" },
-  { label: "Contact", href: "contact.html", match: "contact.html" },
+  { label: "Home", href: "/index.html", match: "index.html" },
+  { label: "Properties", href: "/properties.html", match: "properties.html" },
+  { label: "About", href: "/about.html", match: "about.html" },
+  { label: "Contact", href: "/contact.html", match: "contact.html" },
 ];
-
 export function renderNavbar(activePage) {
   const mount = document.getElementById("navbar");
   if (!mount) return;

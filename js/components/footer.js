@@ -27,20 +27,20 @@ export function renderFooter() {
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="properties.html">Properties</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/properties.html">Properties</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Property</h4>
           <ul>
-            <li><a href="properties.html?type=house">Houses</a></li>
-            <li><a href="properties.html?type=apartment">Apartments</a></li>
-            <li><a href="properties.html?type=land">Land</a></li>
-            <li><a href="properties.html?type=commercial">Commercial</a></li>
+            <li><a href="/properties.html?type=house">Houses</a></li>
+            <li><a href="/properties.html?type=apartment">Apartments</a></li>
+            <li><a href="/properties.html?type=land">Land</a></li>
+            <li><a href="/properties.html?type=commercial">Commercial</a></li>
           </ul>
         </div>
 
