@@ -1,0 +1,242 @@
+/* =========================================================
+   Ochie Realty — Responsive Rules
+   ========================================================= */
+
+/* ---------- Large desktop refinement ---------- */
+@media (max-width: 1280px) {
+  .details-layout {
+    gap: 34px;
+  }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-grid,
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-preview,
+  .story-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .search-box form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .search-box .btn-primary {
+    grid-column: 1 / -1;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filters-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .details-layout {
+    grid-template-columns: 1fr;
+  }
+  .inquiry-card {
+    position: static;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mission-vision {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Mobile nav + general tablet-down ---------- */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 20px 24px;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    overflow-y: auto;
+  }
+  .nav-links.open {
+    transform: translateX(0);
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-actions .btn-primary {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+  .nav-actions .btn-primary span {
+    display: none;
+  }
+}
+
+/* ---------- Small tablet / large phone ---------- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 560px;
+  }
+  .hero-content {
+    padding: 90px 0 90px;
+  }
+
+  .search-box {
+    margin-top: -50px;
+    padding: 18px;
+  }
+  .search-box form {
+    grid-template-columns: 1fr;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-grid,
+  .filters-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .price-range {
+    flex-direction: column;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .details-stats {
+    gap: 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-head-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-thumbs button {
+    width: 76px;
+  }
+
+  .footer-social {
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

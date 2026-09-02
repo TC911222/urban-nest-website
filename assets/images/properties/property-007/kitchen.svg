@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650" role="img" aria-label="property-007 kitchen placeholder">
+<defs>
+<pattern id="stripes" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+<rect width="28" height="28" fill="#e9e4d8"/>
+<rect width="14" height="28" fill="#e2dccb"/>
+</pattern>
+</defs>
+<rect width="900" height="650" fill="url(#stripes)"/>
+<rect width="900" height="650" fill="#1f4d3b" opacity="0.06"/>
+<text x="50%" y="50%" font-family="Inter, sans-serif" font-size="40" fill="#1f4d3b" text-anchor="middle" dominant-baseline="middle" opacity="0.55">property-007 kitchen</text>
+</svg>

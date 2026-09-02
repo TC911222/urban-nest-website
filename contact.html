@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Ochie Realty | Awka, Anambra State</title>
+  <meta name="description" content="Get in touch with Ochie Realty for property inquiries, viewings and listings in Awka, Anambra State." />
+  <link rel="canonical" href="https://www.example.com/contact.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="contact.html">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="navbar" class="navbar"></header>
+
+  <main id="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have a question about a listing, or want to list your own property? Reach out — we usually reply within a day.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact-layout">
+          <div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+              <div>
+                <h3>Phone</h3>
+                <a href="tel:+2348000000000">+234 800 000 0000</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:hello@ochierealty.ng">hello@ochierealty.ng</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+              <div>
+                <h3>Office Address</h3>
+                <p>12 Enugu Road, Awka, Anambra State, Nigeria</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
+              <div>
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/2348000000000" target="_blank" rel="noopener">Chat with us</a>
+              </div>
+            </div>
+
+            <div class="map-embed">
+              <img src="assets/images/placeholder.svg" alt="Map placeholder showing Ochie Realty's office location in Awka" loading="lazy" width="800" height="400" />
+            </div>
+          </div>
+
+          <div>
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="field field-full" data-field="fullName">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" autocomplete="name" required />
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <div class="field" data-field="email">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <div class="field" data-field="phone">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <div class="field field-full" data-field="subject">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <div class="field field-full" data-field="message">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <div class="field-full">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                <p class="form-status" id="formStatus" role="status"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer"></footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/pages/contact.js"></script>
+</body>
+</html>
