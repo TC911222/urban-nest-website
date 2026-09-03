@@ -11,24 +11,24 @@ import {
   COMPANY_PHONE,
   escapeHtml, // <-- ADD THIS
 } from "../utils.js";
+import { getPropertyById, getRelatedProperties } from "../data/properties.js";
+import { renderPropertyCard } from "../components/propertyCard.js";
 
 const main = document.getElementById("detailsMain");
 const notFound = document.getElementById("notFoundState");
 const relatedSection = document.getElementById("relatedSection");
 
 function getPropertyIdFromUrl() {
-  // 1. Check for legacy query param first (e.g., ?id=property-001)
+  // 1. Check for query param first (legacy support)
   const idParam = new URLSearchParams(window.location.search).get("id");
   if (idParam) return idParam;
 
-  // 2. NEW: Extract ID from the static URL path: /properties/property-001.html
+  // 2. NEW: Extract ID from static URL path: /properties/property-001.html
   const pathParts = window.location.pathname.split("/");
   const fileName = pathParts[pathParts.length - 1]; // e.g., "property-001.html"
-
   if (fileName.startsWith("property-") && fileName.endsWith(".html")) {
-    return fileName.replace(".html", ""); // Returns "property-001"
+    return fileName.replace(".html", ""); // returns "property-001"
   }
-
   return null;
 }
 

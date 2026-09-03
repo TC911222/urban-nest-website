@@ -1,125 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Properties for Sale &amp; Rent in Awka | Ochie Realty</title>
-  <meta name="description" content="Search and filter houses, apartments, land and commercial properties for sale and rent across Awka, Anambra State." />
-  <link rel="canonical" href="https://www.example.com/properties.html" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties for Sale &amp; Rent in Awka | Ochie Realty</title>
+    <meta
+      name="description"
+      content="Search and filter houses, apartments, land and commercial properties for sale and rent across Awka, Anambra State."
+    />
+    <link rel="canonical" href="https://www.example.com/properties.html" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="properties.html">
-  <a class="skip-link" href="#main">Skip to content</a>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="properties.html">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <header id="navbar" class="navbar"></header>
+    <header id="navbar" class="navbar"></header>
 
-  <main id="main">
-    <section class="page-header">
-      <div class="container">
-        <h1>Find Your Next Property</h1>
-        <p>Explore homes, land and commercial properties available in Awka and surrounding locations.</p>
-      </div>
-    </section>
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <h1>Find Your Next Property</h1>
+          <p>
+            Explore homes, land and commercial properties available in Awka and
+            surrounding locations.
+          </p>
+        </div>
+      </section>
 
-    <section>
-      <div class="container">
-        <form id="filtersForm" class="filters-bar" role="search" aria-label="Property filters">
-          <div class="filters-grid">
-            <div class="field">
-              <label for="filterSearch">Search</label>
-              <input type="text" id="filterSearch" name="search" placeholder="Title, location, feature…" />
+      <section>
+        <div class="container">
+          <form
+            id="filtersForm"
+            class="filters-bar"
+            role="search"
+            aria-label="Property filters"
+          >
+            <div class="filters-grid">
+              <div class="field">
+                <label for="filterSearch">Search</label>
+                <input
+                  type="text"
+                  id="filterSearch"
+                  name="search"
+                  placeholder="Title, location, feature…"
+                />
+              </div>
+              <div class="field">
+                <label for="filterPurpose">Purpose</label>
+                <select id="filterPurpose" name="purpose">
+                  <option value="">Any</option>
+                  <option value="sale">For Sale</option>
+                  <option value="rent">For Rent</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterArea">Location</label>
+                <select id="filterArea" name="area">
+                  <option value="">All Locations</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterType">Property Type</label>
+                <select id="filterType" name="type">
+                  <option value="">All Types</option>
+                  <option value="house">House</option>
+                  <option value="duplex">Duplex</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="land">Land</option>
+                  <option value="commercial">Commercial</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterBedrooms">Bedrooms</label>
+                <select id="filterBedrooms" name="bedrooms">
+                  <option value="">Any</option>
+                  <option value="1">1+</option>
+                  <option value="2">2+</option>
+                  <option value="3">3+</option>
+                  <option value="4">4+</option>
+                  <option value="5">5+</option>
+                </select>
+              </div>
             </div>
-            <div class="field">
-              <label for="filterPurpose">Purpose</label>
-              <select id="filterPurpose" name="purpose">
-                <option value="">Any</option>
-                <option value="sale">For Sale</option>
-                <option value="rent">For Rent</option>
-              </select>
+
+            <div class="filters-grid-2">
+              <div class="field">
+                <label for="filterMinPrice">Min Price (₦)</label>
+                <input
+                  type="number"
+                  id="filterMinPrice"
+                  name="minPrice"
+                  min="0"
+                  placeholder="0"
+                />
+              </div>
+              <div class="field">
+                <label for="filterMaxPrice">Max Price (₦)</label>
+                <input
+                  type="number"
+                  id="filterMaxPrice"
+                  name="maxPrice"
+                  min="0"
+                  placeholder="No limit"
+                />
+              </div>
+              <div></div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fa-solid fa-filter" aria-hidden="true"></i> Apply
+                Filters
+              </button>
+              <button
+                type="button"
+                id="resetFilters"
+                class="btn btn-dark-outline"
+              >
+                Reset
+              </button>
             </div>
-            <div class="field">
-              <label for="filterArea">Location</label>
-              <select id="filterArea" name="area">
-                <option value="">All Locations</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="filterType">Property Type</label>
-              <select id="filterType" name="type">
-                <option value="">All Types</option>
-                <option value="house">House</option>
-                <option value="duplex">Duplex</option>
-                <option value="apartment">Apartment</option>
-                <option value="land">Land</option>
-                <option value="commercial">Commercial</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="filterBedrooms">Bedrooms</label>
-              <select id="filterBedrooms" name="bedrooms">
-                <option value="">Any</option>
-                <option value="1">1+</option>
-                <option value="2">2+</option>
-                <option value="3">3+</option>
-                <option value="4">4+</option>
-                <option value="5">5+</option>
+          </form>
+
+          <div class="results-bar">
+            <p class="results-count" id="resultsCount" aria-live="polite">
+              Loading properties…
+            </p>
+            <div class="sort-field">
+              <label for="sortSelect">Sort by</label>
+              <select id="sortSelect">
+                <option value="newest">Newest</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="largest">Largest</option>
+                <option value="bedrooms">Most Bedrooms</option>
               </select>
             </div>
           </div>
 
-          <div class="filters-grid-2">
-            <div class="field">
-              <label for="filterMinPrice">Min Price (₦)</label>
-              <input type="number" id="filterMinPrice" name="minPrice" min="0" placeholder="0" />
-            </div>
-            <div class="field">
-              <label for="filterMaxPrice">Max Price (₦)</label>
-              <input type="number" id="filterMaxPrice" name="maxPrice" min="0" placeholder="No limit" />
-            </div>
-            <div></div>
-            <button type="submit" class="btn btn-primary">
-              <i class="fa-solid fa-filter" aria-hidden="true"></i> Apply Filters
+          <div class="property-grid" id="resultsGrid" aria-live="polite"></div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            <i class="fa-solid fa-house-circle-xmark" aria-hidden="true"></i>
+            <h3>No properties found</h3>
+            <p>We couldn't find properties matching your search.</p>
+            <button type="button" id="clearFromEmpty" class="btn btn-primary">
+              Clear Filters
             </button>
-            <button type="button" id="resetFilters" class="btn btn-dark-outline">Reset</button>
-          </div>
-        </form>
-
-        <div class="results-bar">
-          <p class="results-count" id="resultsCount" aria-live="polite">Loading properties…</p>
-          <div class="sort-field">
-            <label for="sortSelect">Sort by</label>
-            <select id="sortSelect">
-              <option value="newest">Newest</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="largest">Largest</option>
-              <option value="bedrooms">Most Bedrooms</option>
-            </select>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="property-grid" id="resultsGrid" aria-live="polite"></div>
+    <footer id="footer" class="site-footer"></footer>
 
-        <div class="empty-state" id="emptyState" hidden>
-          <i class="fa-solid fa-house-circle-xmark" aria-hidden="true"></i>
-          <h3>No properties found</h3>
-          <p>We couldn't find properties matching your search.</p>
-          <button type="button" id="clearFromEmpty" class="btn btn-primary">Clear Filters</button>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="site-footer"></footer>
-
-  <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/pages/properties.js"></script>
-</body>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/pages/properties.js"></script>
+  </body>
 </html>

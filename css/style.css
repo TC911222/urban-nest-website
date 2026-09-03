@@ -247,7 +247,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--primary-color);
+  background: var(--primary-light);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -339,7 +339,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(20, 51, 41, 0.4);
+  background: rgba(20, 51, 41, 0.6);
 }
 .hero-content {
   position: relative;
