@@ -247,7 +247,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--white);
+  background: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -267,7 +267,7 @@ section {
   font-family: var(--font-heading);
   font-size: 1.45rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--white);
 }
 .nav-logo .logo-sub {
   font-size: 0.65rem;
@@ -284,7 +284,7 @@ section {
 
 .nav-links a {
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--white);
   position: relative;
   padding: 6px 2px;
   transition: var(--transition);
@@ -293,7 +293,7 @@ section {
   color: var(--primary-color);
 }
 .nav-links a.active {
-  color: var(--primary-color);
+  color: var(--se);
 }
 .nav-links a.active::after {
   content: "";
@@ -303,6 +303,12 @@ section {
   bottom: -4px;
   height: 2px;
   background: var(--secondary-color);
+}
+.nav-links.open a {
+  color: var(--text-color);
+}
+.nav-links.open a.active {
+  color: var(--primary-color);
 }
 
 .nav-actions {
@@ -314,7 +320,7 @@ section {
 .nav-toggle {
   display: none;
   font-size: 1.4rem;
-  color: var(--primary-color);
+  color: var(--white);
   padding: 6px;
 }
 
@@ -333,12 +339,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(20, 51, 41, 0.92) 0%,
-    rgba(20, 51, 41, 0.72) 55%,
-    rgba(20, 51, 41, 0.4) 100%
-  );
+  background: rgba(20, 51, 41, 0.4);
 }
 .hero-content {
   position: relative;
@@ -356,12 +357,14 @@ section {
   color: var(--white);
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 .hero p {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(255, 255, 255, 0.88);
   margin-bottom: 32px;
   max-width: 500px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 .hero-actions {
   display: flex;
@@ -574,7 +577,11 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20, 51, 41, 0.15) 0%, rgba(20, 51, 41, 0.9) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 51, 41, 0.15) 0%,
+    rgba(20, 51, 41, 0.9) 100%
+  );
 }
 .category-card:hover img {
   transform: scale(1.06);
@@ -986,8 +993,12 @@ section {
   border-radius: var(--radius-md);
 }
 @keyframes skeleton-loading {
-  0% { background-position: 100% 50%; }
-  100% { background-position: 0 50%; }
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 /* ---------- Property Details ---------- */

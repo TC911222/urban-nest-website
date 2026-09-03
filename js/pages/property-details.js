@@ -3,14 +3,13 @@
  * Loads a single property from ?id=... and renders the whole page,
  * or shows a "Property Not Found" state if the id doesn't match.
  */
-import { getPropertyById, getRelatedProperties } from "../data/properties.js";
-import { renderPropertyCard } from "../components/propertyCard.js";
 import {
   formatPriceLabel,
   capitalize,
   withImageFallback,
   buildWhatsAppLink,
   COMPANY_PHONE,
+  escapeHtml, // <-- ADD THIS
 } from "../utils.js";
 
 const main = document.getElementById("detailsMain");
@@ -82,37 +81,52 @@ function renderGallery(property) {
   const mainImg = document.getElementById("galleryMainImg");
   const thumbsWrap = document.getElementById("galleryThumbs");
 
+  // Get all images. If there are no extra gallery images, use only the cover.
   const images = property.images.gallery.length
     ? property.images.gallery
     : [property.images.cover];
 
+  // ----- 1. Set the big main image -----
   mainImg.src = images[0];
   mainImg.alt = `${property.title} — photo 1 of ${images.length}`;
   withImageFallback(mainImg);
 
+  // ----- 2. Clear the thumbnail container -----
   thumbsWrap.innerHTML = "";
-  images.forEach((src, index) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = index === 0 ? "active" : "";
-    btn.setAttribute(
-      "aria-label",
-      `Show photo ${index + 1} of ${images.length}`,
-    );
-    btn.innerHTML = `<img src="${src}" alt="" loading="lazy" />`;
-    withImageFallback(btn.querySelector("img"));
 
-    btn.addEventListener("click", () => {
-      mainImg.src = src;
-      mainImg.alt = `${property.title} — photo ${index + 1} of ${images.length}`;
-      thumbsWrap
-        .querySelectorAll("button")
-        .forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
+  // ----- 3. ONLY show thumbnails if there is MORE THAN 1 image -----
+  if (images.length > 1) {
+    // Loop through each image and create a thumbnail button
+    images.forEach((src, index) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = index === 0 ? "active" : "";
+      btn.setAttribute(
+        "aria-label",
+        `Show photo ${index + 1} of ${images.length}`,
+      );
+      btn.innerHTML = `<img src="${src}" alt="" loading="lazy" />`;
+      withImageFallback(btn.querySelector("img"));
+
+      // When a thumbnail is clicked, swap the main image
+      btn.addEventListener("click", () => {
+        mainImg.src = src;
+        mainImg.alt = `${property.title} — photo ${index + 1} of ${images.length}`;
+        thumbsWrap
+          .querySelectorAll("button")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+
+      thumbsWrap.appendChild(btn);
     });
 
-    thumbsWrap.appendChild(btn);
-  });
+    // Make sure the thumbnails row is visible
+    thumbsWrap.style.display = "flex";
+  } else {
+    // If there's only 1 image, hide the entire thumbnail row
+    thumbsWrap.style.display = "none";
+  }
 }
 
 function renderInfo(property) {
@@ -182,11 +196,11 @@ function showNotFound() {
   notFound.hidden = false;
 }
 
-function escapeHtml(str = "") {
+/* function escapeHtml(str = "") {
   const div = document.createElement("div");
   div.textContent = str;
   return div.innerHTML;
-}
+} */
 
 function init() {
   const id = getPropertyIdFromUrl();

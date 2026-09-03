@@ -63,8 +63,18 @@ function filterProperties(filters) {
     if (filters.area && p.location.area !== filters.area) return false;
     if (filters.type && p.type !== filters.type) return false;
 
-    if (filters.minPrice !== null && !Number.isNaN(filters.minPrice) && p.price < filters.minPrice) return false;
-    if (filters.maxPrice !== null && !Number.isNaN(filters.maxPrice) && p.price > filters.maxPrice) return false;
+    if (
+      filters.minPrice !== null &&
+      !Number.isNaN(filters.minPrice) &&
+      p.price < filters.minPrice
+    )
+      return false;
+    if (
+      filters.maxPrice !== null &&
+      !Number.isNaN(filters.maxPrice) &&
+      p.price > filters.maxPrice
+    )
+      return false;
 
     if (filters.bedrooms) {
       const min = Number(filters.bedrooms);
@@ -88,7 +98,9 @@ function sortProperties(list, sortBy) {
       return sorted.sort((a, b) => b.bedrooms - a.bedrooms);
     case "newest":
     default:
-      return sorted.sort((a, b) => new Date(b.dateListed) - new Date(a.dateListed));
+      return sorted.sort(
+        (a, b) => new Date(b.dateListed) - new Date(a.dateListed),
+      );
   }
 }
 
@@ -105,7 +117,9 @@ function renderResults() {
   } else {
     grid.hidden = false;
     emptyState.hidden = true;
-    sorted.forEach((property) => grid.appendChild(renderPropertyCard(property)));
+    sorted.forEach((property) =>
+      grid.appendChild(renderPropertyCard(property)),
+    );
   }
 
   resultsCount.textContent = `${sorted.length} ${sorted.length === 1 ? "property" : "properties"} found`;
@@ -122,7 +136,8 @@ function syncUrlWithFilters(filters) {
   if (filters.minPrice) params.set("minPrice", String(filters.minPrice));
   if (filters.maxPrice) params.set("maxPrice", String(filters.maxPrice));
   if (filters.bedrooms) params.set("bedrooms", filters.bedrooms);
-  if (sortSelect.value && sortSelect.value !== "newest") params.set("sort", sortSelect.value);
+  if (sortSelect.value && sortSelect.value !== "newest")
+    params.set("sort", sortSelect.value);
 
   const query = params.toString();
   const newUrl = `${window.location.pathname}${query ? `?${query}` : ""}`;
@@ -149,7 +164,7 @@ function resetFilters() {
   window.history.replaceState({}, "", window.location.pathname);
   renderResults();
 }
-
+let debounceTimer;
 function init() {
   populateAreaOptions();
   applyUrlFilters();
@@ -160,8 +175,11 @@ function init() {
     renderResults();
   });
 
-  form.addEventListener("input", () => renderResults());
-  form.addEventListener("change", () => renderResults());
+  form.addEventListener("input", () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(renderResults, 300);
+  });
+  form.addEventListener("change", () => renderResults()); // 'change' is fine for selects/checkboxes without debounce
   sortSelect.addEventListener("change", () => renderResults());
 
   resetBtn.addEventListener("click", resetFilters);

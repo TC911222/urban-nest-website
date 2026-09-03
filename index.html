@@ -1,299 +1,471 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ochie Realty | Homes, Land & Commercial Property in Awka</title>
-  <meta name="description" content="Discover verified homes, apartments, land and commercial properties for sale and rent in Awka, Anambra State with Ochie Realty." />
-  <link rel="canonical" href="https://www.example.com/index.html" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ochie Realty | Homes, Land & Commercial Property in Awka</title>
+    <meta
+      name="description"
+      content="Discover verified homes, apartments, land and commercial properties for sale and rent in Awka, Anambra State with Ochie Realty."
+    />
+    <link rel="canonical" href="https://www.example.com/index.html" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body data-page="index.html">
-  <a class="skip-link" href="#main">Skip to content</a>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="index.html">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <header id="navbar" class="navbar"></header>
+    <header id="navbar" class="navbar"></header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" style="background-image: url('assets/images/hero/hero-home.svg');">
-      <div class="container">
-        <div class="hero-content">
-          <p class="section-eyebrow">Awka &amp; Anambra Real Estate</p>
-          <h1>Find Your Perfect Property in Awka</h1>
-          <p>Discover homes, land, apartments and commercial properties in locations that fit your lifestyle and investment goals.</p>
-          <div class="hero-actions">
-            <a href="properties.html" class="btn btn-primary">Explore Properties</a>
-            <a href="contact.html" class="btn btn-outline">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="search-box">
-        <form id="heroSearchForm">
-          <div class="search-field">
-            <label for="searchLocation">Location</label>
-            <input type="text" id="searchLocation" name="location" placeholder="e.g. Ifite, Awka" />
-          </div>
-          <div class="search-field">
-            <label for="searchType">Property Type</label>
-            <select id="searchType" name="type">
-              <option value="">All Types</option>
-              <option value="house">House</option>
-              <option value="duplex">Duplex</option>
-              <option value="apartment">Apartment</option>
-              <option value="land">Land</option>
-              <option value="commercial">Commercial</option>
-            </select>
-          </div>
-          <div class="search-field">
-            <label for="searchPurpose">Purpose</label>
-            <select id="searchPurpose" name="purpose">
-              <option value="">Any</option>
-              <option value="sale">For Sale</option>
-              <option value="rent">For Rent</option>
-            </select>
-          </div>
-          <div class="search-field">
-            <label for="searchPrice">Max Price (₦)</label>
-            <input type="number" id="searchPrice" name="price" placeholder="e.g. 50000000" min="0" />
-          </div>
-          <button type="submit" class="btn btn-primary">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Search
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!-- FEATURED PROPERTIES -->
-    <section aria-labelledby="featuredHeading">
-      <div class="container">
-        <div class="section-head-row">
-          <div>
-            <p class="section-eyebrow">Handpicked Listings</p>
-            <h2 id="featuredHeading" class="section-heading">Featured Properties</h2>
-            <p class="section-sub">A closer look at some of the most sought-after homes and spaces currently available.</p>
-          </div>
-          <a href="properties.html" class="btn btn-dark-outline">View All Properties</a>
-        </div>
-        <div class="property-grid" id="featuredGrid" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <!-- CATEGORIES -->
-    <section class="bg-cream" aria-labelledby="categoriesHeading">
-      <div class="container">
-        <p class="section-eyebrow">Browse by Category</p>
-        <h2 id="categoriesHeading" class="section-heading">Property Categories</h2>
-        <p class="section-sub">Whichever kind of property you're after, start your search here.</p>
-
-        <div class="category-grid">
-          <a class="category-card" href="properties.html?type=house">
-            <img src="assets/images/categories/houses.svg" alt="Detached and bungalow houses in Awka" loading="lazy" width="600" height="500" />
-            <div class="category-card-body">
-              <i class="fa-solid fa-house" aria-hidden="true"></i>
-              <h3>Houses</h3>
-              <p>Detached and semi-detached family homes.</p>
-              <span class="category-count" data-category-count="house">Loading…</span>
+    <main id="main">
+      <!-- HERO -->
+      <section
+        class="hero"
+        style="
+          background-image: url(&quot;assets/images/hero/hero-home.png&quot;);
+        "
+      >
+        <div class="container">
+          <div class="hero-content">
+            <p class="section-eyebrow">Awka &amp; Anambra Real Estate</p>
+            <h1>Find Your Perfect Property in Awka</h1>
+            <p>
+              Discover homes, land, apartments and commercial properties in
+              locations that fit your lifestyle and investment goals.
+            </p>
+            <div class="hero-actions">
+              <a href="properties.html" class="btn btn-primary"
+                >Explore Properties</a
+              >
+              <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
-          </a>
-
-          <a class="category-card" href="properties.html?type=apartment">
-            <img src="assets/images/categories/apartments.svg" alt="Serviced apartments and flats in Awka" loading="lazy" width="600" height="500" />
-            <div class="category-card-body">
-              <i class="fa-solid fa-building" aria-hidden="true"></i>
-              <h3>Apartments</h3>
-              <p>Serviced flats and mini flats for rent or sale.</p>
-              <span class="category-count" data-category-count="apartment">Loading…</span>
-            </div>
-          </a>
-
-          <a class="category-card" href="properties.html?type=land">
-            <img src="assets/images/categories/land.svg" alt="Fenced plots of land for sale in Awka" loading="lazy" width="600" height="500" />
-            <div class="category-card-body">
-              <i class="fa-solid fa-mound" aria-hidden="true"></i>
-              <h3>Land</h3>
-              <p>Titled plots ready for development or investment.</p>
-              <span class="category-count" data-category-count="land">Loading…</span>
-            </div>
-          </a>
-
-          <a class="category-card" href="properties.html?type=commercial">
-            <img src="assets/images/categories/commercial.svg" alt="Commercial shop and office space in Awka" loading="lazy" width="600" height="500" />
-            <div class="category-card-body">
-              <i class="fa-solid fa-shop" aria-hidden="true"></i>
-              <h3>Commercial</h3>
-              <p>Shops and office space in high-traffic areas.</p>
-              <span class="category-count" data-category-count="commercial">Loading…</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section aria-labelledby="whyHeading">
-      <div class="container">
-        <p class="section-eyebrow">Why Ochie Realty</p>
-        <h2 id="whyHeading" class="section-heading">Built on Trust, Local to Awka</h2>
-
-        <div class="trust-grid">
-          <div class="trust-card">
-            <div class="trust-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-            <h3>Verified Properties</h3>
-            <p>We carefully review property information to help you make confident decisions.</p>
-          </div>
-          <div class="trust-card">
-            <div class="trust-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></div>
-            <h3>Local Expertise</h3>
-            <p>We understand the Awka property market and its surrounding locations.</p>
-          </div>
-          <div class="trust-card">
-            <div class="trust-icon"><i class="fa-solid fa-file-contract" aria-hidden="true"></i></div>
-            <h3>Transparent Process</h3>
-            <p>Clear communication and straightforward property information, always.</p>
-          </div>
-          <div class="trust-card">
-            <div class="trust-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
-            <h3>Dedicated Support</h3>
-            <p>We help clients from property discovery through to their next step.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="bg-cream" aria-labelledby="howHeading">
       <div class="container">
-        <p class="section-eyebrow">A Simple Process</p>
-        <h2 id="howHeading" class="section-heading">How It Works</h2>
-
-        <div class="steps-grid">
-          <div class="step-card">
-            <span class="step-number">01</span>
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            <h3>Search</h3>
-            <p>Find properties that match your requirements.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-number">02</span>
-            <i class="fa-solid fa-images" aria-hidden="true"></i>
-            <h3>Explore</h3>
-            <p>View property details, images and features.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-number">03</span>
-            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-            <h3>Schedule a Viewing</h3>
-            <p>Contact our team to arrange an inspection.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-number">04</span>
-            <i class="fa-solid fa-key" aria-hidden="true"></i>
-            <h3>Make Your Move</h3>
-            <p>Take the next step toward your property.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT PREVIEW -->
-    <section aria-labelledby="aboutPreviewHeading">
-      <div class="container">
-        <div class="about-preview">
-          <div class="about-preview-media">
-            <img src="assets/images/about/team.svg" alt="The Ochie Realty team in their Awka office" loading="lazy" width="900" height="700" />
-          </div>
-          <div class="about-preview-text">
-            <p class="section-eyebrow">About Ochie Realty</p>
-            <h2 id="aboutPreviewHeading" class="section-heading">A Local Team You Can Trust</h2>
-            <p>Ochie Realty is a real-estate company based in Awka, Anambra State, connecting people with homes, land and commercial spaces across the city and its surrounding communities.</p>
-            <p>We specialise in guiding first-time buyers, tenants and investors through every stage of finding property here — with clear information and no surprises.</p>
-            <a href="about.html" class="btn btn-dark-outline">Learn More About Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="bg-cream" aria-labelledby="testimonialsHeading">
-      <div class="container">
-        <p class="section-eyebrow">Client Stories</p>
-        <h2 id="testimonialsHeading" class="section-heading">What Our Clients Say</h2>
-
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        <div class="search-box">
+          <form id="heroSearchForm">
+            <div class="search-field">
+              <label for="searchLocation">Location</label>
+              <input
+                type="text"
+                id="searchLocation"
+                name="location"
+                placeholder="e.g. Ifite, Awka"
+              />
             </div>
-            <p class="testimonial-text">"The team made finding our first home in Ifite so much easier than we expected. Every detail they gave us matched what we saw in person."</p>
-            <div class="testimonial-person">
-              <div class="testimonial-avatar"><img src="assets/images/avatar-placeholder.svg" alt="" loading="lazy" width="46" height="46" /></div>
-              <div>
-                <strong>Chidinma O.</strong>
-                <span>Homeowner, Ifite</span>
+            <div class="search-field">
+              <label for="searchType">Property Type</label>
+              <select id="searchType" name="type">
+                <option value="">All Types</option>
+                <option value="house">House</option>
+                <option value="duplex">Duplex</option>
+                <option value="apartment">Apartment</option>
+                <option value="land">Land</option>
+                <option value="commercial">Commercial</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="searchPurpose">Purpose</label>
+              <select id="searchPurpose" name="purpose">
+                <option value="">Any</option>
+                <option value="sale">For Sale</option>
+                <option value="rent">For Rent</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="searchPrice">Max Price (₦)</label>
+              <input
+                type="number"
+                id="searchPrice"
+                name="price"
+                placeholder="e.g. 50000000"
+                min="0"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FEATURED PROPERTIES -->
+      <section aria-labelledby="featuredHeading">
+        <div class="container">
+          <div class="section-head-row">
+            <div>
+              <p class="section-eyebrow">Handpicked Listings</p>
+              <h2 id="featuredHeading" class="section-heading">
+                Featured Properties
+              </h2>
+              <p class="section-sub">
+                A closer look at some of the most sought-after homes and spaces
+                currently available.
+              </p>
+            </div>
+            <a href="properties.html" class="btn btn-dark-outline"
+              >View All Properties</a
+            >
+          </div>
+          <div class="property-grid" id="featuredGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section class="bg-cream" aria-labelledby="categoriesHeading">
+        <div class="container">
+          <p class="section-eyebrow">Browse by Category</p>
+          <h2 id="categoriesHeading" class="section-heading">
+            Property Categories
+          </h2>
+          <p class="section-sub">
+            Whichever kind of property you're after, start your search here.
+          </p>
+
+          <div class="category-grid">
+            <a class="category-card" href="properties.html?type=house">
+              <img
+                src="assets/images/categories/houses.svg"
+                alt="Detached and bungalow houses in Awka"
+                loading="lazy"
+                width="600"
+                height="500"
+              />
+              <div class="category-card-body">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <h3>Houses</h3>
+                <p>Detached and semi-detached family homes.</p>
+                <span class="category-count" data-category-count="house"
+                  >Loading…</span
+                >
+              </div>
+            </a>
+
+            <a class="category-card" href="properties.html?type=apartment">
+              <img
+                src="assets/images/categories/apartments.svg"
+                alt="Serviced apartments and flats in Awka"
+                loading="lazy"
+                width="600"
+                height="500"
+              />
+              <div class="category-card-body">
+                <i class="fa-solid fa-building" aria-hidden="true"></i>
+                <h3>Apartments</h3>
+                <p>Serviced flats and mini flats for rent or sale.</p>
+                <span class="category-count" data-category-count="apartment"
+                  >Loading…</span
+                >
+              </div>
+            </a>
+
+            <a class="category-card" href="properties.html?type=land">
+              <img
+                src="assets/images/categories/land.svg"
+                alt="Fenced plots of land for sale in Awka"
+                loading="lazy"
+                width="600"
+                height="500"
+              />
+              <div class="category-card-body">
+                <i class="fa-solid fa-mound" aria-hidden="true"></i>
+                <h3>Land</h3>
+                <p>Titled plots ready for development or investment.</p>
+                <span class="category-count" data-category-count="land"
+                  >Loading…</span
+                >
+              </div>
+            </a>
+
+            <a class="category-card" href="properties.html?type=commercial">
+              <img
+                src="assets/images/categories/commercial.svg"
+                alt="Commercial shop and office space in Awka"
+                loading="lazy"
+                width="600"
+                height="500"
+              />
+              <div class="category-card-body">
+                <i class="fa-solid fa-shop" aria-hidden="true"></i>
+                <h3>Commercial</h3>
+                <p>Shops and office space in high-traffic areas.</p>
+                <span class="category-count" data-category-count="commercial"
+                  >Loading…</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section aria-labelledby="whyHeading">
+        <div class="container">
+          <p class="section-eyebrow">Why Ochie Realty</p>
+          <h2 id="whyHeading" class="section-heading">
+            Built on Trust, Local to Awka
+          </h2>
+
+          <div class="trust-grid">
+            <div class="trust-card">
+              <div class="trust-icon">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              </div>
+              <h3>Verified Properties</h3>
+              <p>
+                We carefully review property information to help you make
+                confident decisions.
+              </p>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">
+                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+              </div>
+              <h3>Local Expertise</h3>
+              <p>
+                We understand the Awka property market and its surrounding
+                locations.
+              </p>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">
+                <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+              </div>
+              <h3>Transparent Process</h3>
+              <p>
+                Clear communication and straightforward property information,
+                always.
+              </p>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+              </div>
+              <h3>Dedicated Support</h3>
+              <p>
+                We help clients from property discovery through to their next
+                step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="bg-cream" aria-labelledby="howHeading">
+        <div class="container">
+          <p class="section-eyebrow">A Simple Process</p>
+          <h2 id="howHeading" class="section-heading">How It Works</h2>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <span class="step-number">01</span>
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <h3>Search</h3>
+              <p>Find properties that match your requirements.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">02</span>
+              <i class="fa-solid fa-images" aria-hidden="true"></i>
+              <h3>Explore</h3>
+              <p>View property details, images and features.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">03</span>
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+              <h3>Schedule a Viewing</h3>
+              <p>Contact our team to arrange an inspection.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">04</span>
+              <i class="fa-solid fa-key" aria-hidden="true"></i>
+              <h3>Make Your Move</h3>
+              <p>Take the next step toward your property.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT PREVIEW -->
+      <section aria-labelledby="aboutPreviewHeading">
+        <div class="container">
+          <div class="about-preview">
+            <div class="about-preview-media">
+              <img
+                src="assets/images/about/team.svg"
+                alt="The Ochie Realty team in their Awka office"
+                loading="lazy"
+                width="900"
+                height="700"
+              />
+            </div>
+            <div class="about-preview-text">
+              <p class="section-eyebrow">About Ochie Realty</p>
+              <h2 id="aboutPreviewHeading" class="section-heading">
+                A Local Team You Can Trust
+              </h2>
+              <p>
+                Ochie Realty is a real-estate company based in Awka, Anambra
+                State, connecting people with homes, land and commercial spaces
+                across the city and its surrounding communities.
+              </p>
+              <p>
+                We specialise in guiding first-time buyers, tenants and
+                investors through every stage of finding property here — with
+                clear information and no surprises.
+              </p>
+              <a href="about.html" class="btn btn-dark-outline"
+                >Learn More About Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="bg-cream" aria-labelledby="testimonialsHeading">
+        <div class="container">
+          <p class="section-eyebrow">Client Stories</p>
+          <h2 id="testimonialsHeading" class="section-heading">
+            What Our Clients Say
+          </h2>
+
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <p class="testimonial-text">
+                "The team made finding our first home in Ifite so much easier
+                than we expected. Every detail they gave us matched what we saw
+                in person."
+              </p>
+              <div class="testimonial-person">
+                <div class="testimonial-avatar">
+                  <img
+                    src="assets/images/avatar-placeholder.svg"
+                    alt=""
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                  />
+                </div>
+                <div>
+                  <strong>Chidinma O.</strong>
+                  <span>Homeowner, Ifite</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                <i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <p class="testimonial-text">
+                "I was able to filter by budget and location right away. Saved
+                me weeks of back-and-forth phone calls with agents."
+              </p>
+              <div class="testimonial-person">
+                <div class="testimonial-avatar">
+                  <img
+                    src="assets/images/avatar-placeholder.svg"
+                    alt=""
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                  />
+                </div>
+                <div>
+                  <strong>Uche N.</strong>
+                  <span>Tenant, Okpuno</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-rating" aria-label="4 out of 5 stars">
+                <i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-solid fa-star" aria-hidden="true"></i
+                ><i class="fa-regular fa-star" aria-hidden="true"></i>
+              </div>
+              <p class="testimonial-text">
+                "Bought a plot of land in Nibo through Ochie Realty. Clear
+                documentation and a responsive team throughout the process."
+              </p>
+              <div class="testimonial-person">
+                <div class="testimonial-avatar">
+                  <img
+                    src="assets/images/avatar-placeholder.svg"
+                    alt=""
+                    loading="lazy"
+                    width="46"
+                    height="46"
+                  />
+                </div>
+                <div>
+                  <strong>Ifeanyi K.</strong>
+                  <span>Investor, Nibo</span>
+                </div>
               </div>
             </div>
           </div>
+          <p class="testimonial-note">
+            Sample testimonials for demonstration purposes — replace with
+            verified client feedback before launch.
+          </p>
+        </div>
+      </section>
 
-          <div class="testimonial-card">
-            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
-            </div>
-            <p class="testimonial-text">"I was able to filter by budget and location right away. Saved me weeks of back-and-forth phone calls with agents."</p>
-            <div class="testimonial-person">
-              <div class="testimonial-avatar"><img src="assets/images/avatar-placeholder.svg" alt="" loading="lazy" width="46" height="46" /></div>
-              <div>
-                <strong>Uche N.</strong>
-                <span>Tenant, Okpuno</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-rating" aria-label="4 out of 5 stars">
-              <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i>
-            </div>
-            <p class="testimonial-text">"Bought a plot of land in Nibo through Ochie Realty. Clear documentation and a responsive team throughout the process."</p>
-            <div class="testimonial-person">
-              <div class="testimonial-avatar"><img src="assets/images/avatar-placeholder.svg" alt="" loading="lazy" width="46" height="46" /></div>
-              <div>
-                <strong>Ifeanyi K.</strong>
-                <span>Investor, Nibo</span>
-              </div>
+      <!-- CTA -->
+      <section
+        class="cta-section"
+        style="
+          background-image: url(&quot;assets/images/cta/cta-home.svg&quot;);
+        "
+      >
+        <div class="container">
+          <div class="cta-inner">
+            <h2>Ready to Find Your Next Property?</h2>
+            <p>Let us help you find a property that fits your goals.</p>
+            <div class="cta-actions">
+              <a href="properties.html" class="btn btn-primary"
+                >Explore Properties</a
+              >
+              <a href="contact.html" class="btn btn-outline">Contact Us</a>
             </div>
           </div>
         </div>
-        <p class="testimonial-note">Sample testimonials for demonstration purposes — replace with verified client feedback before launch.</p>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- CTA -->
-    <section class="cta-section" style="background-image: url('assets/images/cta/cta-home.svg');">
-      <div class="container">
-        <div class="cta-inner">
-          <h2>Ready to Find Your Next Property?</h2>
-          <p>Let us help you find a property that fits your goals.</p>
-          <div class="cta-actions">
-            <a href="properties.html" class="btn btn-primary">Explore Properties</a>
-            <a href="contact.html" class="btn btn-outline">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    <footer id="footer" class="site-footer"></footer>
 
-  <footer id="footer" class="site-footer"></footer>
-
-  <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/pages/home.js"></script>
-</body>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/pages/home.js"></script>
+  </body>
 </html>
