@@ -290,7 +290,7 @@ section {
   transition: var(--transition);
 }
 .nav-links a:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 .nav-links a.active {
   color: var(--se);

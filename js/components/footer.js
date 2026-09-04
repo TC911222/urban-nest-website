@@ -55,7 +55,7 @@ export function renderFooter() {
       </div>
 
       <div class="footer-bottom">
-        &copy; ${year} Ochie Realty. All rights reserved. Demo content — replace before launch.
+        &copy; ${year} Ochie Realty. All rights reserved
       </div>
     </div>
   `;
