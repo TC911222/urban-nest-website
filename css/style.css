@@ -1,10 +1,5 @@
-/* =========================================================
-   Ochie Realty — Main Stylesheet
-   Awka, Anambra real-estate demo site
-   ========================================================= */
-
 /* ---------- Design Tokens ---------- */
-:root {
+/* :root {
   --primary-color: #1f4d3b;
   --primary-dark: #143329;
   --primary-light: #2e6b52;
@@ -41,8 +36,46 @@
 
   --transition: 0.3s ease;
   --header-height: 84px;
-}
+} */
 
+:root {
+  --primary-color: #1a3a5c;
+  --primary-dark: #0e253e;
+  --primary-light: #2a5a8a;
+  --secondary-color: #4a8db7;
+  --accent-color: #6db3d9;
+
+  --text-color: #1a2a3a;
+  --text-light: #4a5a6a;
+  --text-muted: #8a9aaa;
+  --white: #ffffff;
+  --black: #000000;
+
+  --background-color: #f8faff;
+  --background-light: #f0f5fa;
+  --background-cream: #e8f0f8;
+
+  --border-color: #d0dce8;
+
+  --success-color: #2e7d32;
+  --danger-color: #c62828;
+
+  --font-primary: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  --container-width: 1200px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 2px 8px rgba(26, 58, 92, 0.08);
+  --shadow-md: 0 8px 24px rgba(26, 58, 92, 0.12);
+  --shadow-lg: 0 15px 40px rgba(26, 58, 92, 0.18);
+
+  --transition: 0.3s ease;
+  --header-height: 84px;
+}
 /* ---------- Reset ---------- */
 *,
 *::before,
