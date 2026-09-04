@@ -1,0 +1,7 @@
+[build]
+  base = "."
+  command = "node build.js"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
