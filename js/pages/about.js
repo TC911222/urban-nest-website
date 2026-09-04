@@ -8,17 +8,17 @@ const team = [
   {
     name: "Ochie Nwosu",
     role: "Founder & Managing Director",
-    photo: "assets/images/about/team-1.svg",
+    photo: "assets/images/about/profile-1.jpg",
   },
   {
     name: "Adaeze Chukwu",
     role: "Head of Sales",
-    photo: "assets/images/about/team-2.svg",
+    photo: "assets/images/about/profile2.jpg",
   },
   {
     name: "Emeka Obi",
     role: "Client Relations Lead",
-    photo: "assets/images/about/team-3.svg",
+    photo: "assets/images/about/profile3.jpg",
   },
 ];
 
@@ -36,7 +36,7 @@ function renderTeam() {
         <h3>${member.name}</h3>
         <span>${member.role}</span>
       </div>
-    `
+    `,
     )
     .join("");
 
@@ -46,7 +46,7 @@ function renderTeam() {
       () => {
         img.src = "assets/images/placeholder.svg";
       },
-      { once: true }
+      { once: true },
     );
   });
 }

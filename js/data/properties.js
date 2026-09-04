@@ -29,13 +29,13 @@ export const properties = [
     featured: true,
     dateListed: "2026-08-20",
     images: {
-      cover: "/assets/images/properties/property-001/exterior.svg",
+      cover: "/assets/images/properties/property-001/OO1-Cover.jpg",
       gallery: [
-        "/assets/images/properties/property-001/exterior.svg",
-        "/assets/images/properties/property-001/living-room.svg",
-        "/assets/images/properties/property-001/kitchen.svg",
-        "/assets/images/properties/property-001/master-bedroom.svg",
-        "/assets/images/properties/property-001/backyard.svg",
+        "/assets/images/properties/property-001/exterior-living-room.jpg",
+        "/assets/images/properties/property-001/OO1-Cover.jpg",
+        "/assets/images/properties/property-001/kitchen.jpg",
+        "/assets/images/properties/property-001/OO1-Cover.jpg",
+        "/assets/images/properties/property-001/exterior-living-room.jpg",
       ],
     },
   },
@@ -55,10 +55,10 @@ export const properties = [
     featured: true,
     dateListed: "2026-08-15",
     images: {
-      cover: "/assets/images/properties/property-002/exterior.svg",
+      cover: "/assets/images/properties/property-002/office-Space.jpg",
       gallery: [
-        "/assets/images/properties/property-002/exterior.svg",
-        "/assets/images/properties/property-002/living-room.svg",
+        "/assets/images/properties/property-002/1-bedroom.jpg",
+        "/assets/images/properties/property-002/office-Space.jpg",
         "/assets/images/properties/property-002/kitchen.svg",
         "/assets/images/properties/property-002/bedroom-02.svg",
       ],
@@ -80,11 +80,10 @@ export const properties = [
     featured: true,
     dateListed: "2026-08-25",
     images: {
-      cover: "/assets/images/properties/property-003/exterior.svg",
+      cover: "/assets/images/properties/property-003/2-bedroom.jpg",
       gallery: [
-        "/assets/images/properties/property-003/exterior.svg",
-        "/assets/images/properties/property-003/living-room.svg",
-        "/assets/images/properties/property-003/bathroom.svg",
+        "/assets/images/properties/property-003/2-bedrooma.jpg",
+        "/assets/images/properties/property-003/2-bedroom.jpg",
       ],
     },
   },
@@ -104,10 +103,10 @@ export const properties = [
     featured: false,
     dateListed: "2026-07-30",
     images: {
-      cover: "/assets/images/properties/property-004/exterior.svg",
+      cover: "/assets/images/properties/property-004/half-plot.jpg",
       gallery: [
-        "/assets/images/properties/property-004/exterior.svg",
-        "/assets/images/properties/property-004/backyard.svg",
+        "/assets/images/properties/property-004/exterior-living-room.jpg",
+        "/assets/images/properties/property-004/sub-half-plot.jpg",
       ],
     },
   },
@@ -127,10 +126,10 @@ export const properties = [
     featured: false,
     dateListed: "2026-07-18",
     images: {
-      cover: "/assets/images/properties/property-005/exterior.svg",
+      cover: "/assets/images/properties/property-005/sub-half-plot.jpg",
       gallery: [
-        "/assets/images/properties/property-005/exterior.svg",
-        "/assets/images/properties/property-005/backyard.svg",
+        "/assets/images/properties/property-005/exterior-living-room.jpg",
+        "/assets/images/properties/property-005/kitchen.jpg",
       ],
     },
   },
@@ -150,10 +149,10 @@ export const properties = [
     featured: true,
     dateListed: "2026-08-10",
     images: {
-      cover: "/assets/images/properties/property-006/exterior.svg",
+      cover: "/assets/images/properties/property-006/commercial-shop.jpg",
       gallery: [
-        "/assets/images/properties/property-006/exterior.svg",
-        "/assets/images/properties/property-006/living-room.svg",
+        "/assets/images/properties/property-006/OO1-Cover.jpg",
+        "/assets/images/properties/property-006/exterior-living-room.jpg",
       ],
     },
   },
@@ -180,12 +179,10 @@ export const properties = [
     featured: true,
     dateListed: "2026-08-01",
     images: {
-      cover: "/assets/images/properties/property-007/exterior.svg",
+      cover: "/assets/images/properties/property-007/4-Bedroom-Duplex.jpg",
       gallery: [
-        "/assets/images/properties/property-007/exterior.svg",
-        "/assets/images/properties/property-007/living-room.svg",
-        "/assets/images/properties/property-007/kitchen.svg",
-        "/assets/images/properties/property-007/master-bedroom.svg",
+        "/assets/images/properties/property-007/4-Bedroom-Duplex.jpg",
+        "/assets/images/properties/property-007/exterior-living-room.jpg",
       ],
     },
   },
@@ -205,10 +202,10 @@ export const properties = [
     featured: false,
     dateListed: "2026-08-27",
     images: {
-      cover: "/assets/images/properties/property-008/exterior.svg",
+      cover: "/assets/images/properties/property-008/1-bedroom.jpg",
       gallery: [
-        "/assets/images/properties/property-008/exterior.svg",
-        "/assets/images/properties/property-008/bedroom-02.svg",
+        "/assets/images/properties/property-008/exterior-living-room.jpg",
+        "/assets/images/properties/property-008/1-bedroom.jpg",
       ],
     },
   },
@@ -228,10 +225,10 @@ export const properties = [
     featured: false,
     dateListed: "2026-07-22",
     images: {
-      cover: "/assets/images/properties/property-009/exterior.svg",
+      cover: "/assets/images/properties/property-009/1-bedroom.jpg",
       gallery: [
-        "/assets/images/properties/property-009/exterior.svg",
-        "/assets/images/properties/property-009/living-room.svg",
+        "/assets/images/properties/property-009/exterior-living-room.jpg",
+        "/assets/images/properties/property-009/1-bedroom.jpg",
       ],
     },
   },
@@ -251,10 +248,10 @@ export const properties = [
     featured: false,
     dateListed: "2026-08-05",
     images: {
-      cover: "/assets/images/properties/property-010/exterior.svg",
+      cover: "/assets/images/properties/property-010/office-Space.jpg",
       gallery: [
-        "/assets/images/properties/property-010/exterior.svg",
-        "/assets/images/properties/property-010/living-room.svg",
+        "/assets/images/properties/property-010/1-bedroom.jpg",
+        "/assets/images/properties/property-010/office-Space.jpg",
       ],
     },
   },
@@ -274,11 +271,10 @@ export const properties = [
     featured: false,
     dateListed: "2026-08-12",
     images: {
-      cover: "/assets/images/properties/property-011/exterior.svg",
+      cover: "/assets/images/properties/property-011/4-Bedroom-Duplex.jpg",
       gallery: [
-        "/assets/images/properties/property-011/exterior.svg",
-        "/assets/images/properties/property-011/kitchen.svg",
-        "/assets/images/properties/property-011/master-bedroom.svg",
+        "/assets/images/properties/property-011/exterior-living-room.jpg",
+        "/assets/images/properties/property-011/kitchen.jpg",
       ],
     },
   },
@@ -298,10 +294,10 @@ export const properties = [
     featured: false,
     dateListed: "2026-08-29",
     images: {
-      cover: "/assets/images/properties/property-012/exterior.svg",
+      cover: "/assets/images/properties/property-012/quarter-plot.jpg",
       gallery: [
-        "/assets/images/properties/property-012/exterior.svg",
-        "/assets/images/properties/property-012/backyard.svg",
+        "/assets/images/properties/property-012/quarter-plot.jpg",
+        "/assets/images/properties/property-012/sub-half-plot.jpg",
       ],
     },
   },
