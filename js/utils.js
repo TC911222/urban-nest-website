@@ -16,7 +16,9 @@ export function formatPrice(amount) {
 
 /** Rent prices are shown "per year" by convention on this site. */
 export function formatPriceLabel(property) {
-  return property.purpose === "rent" ? `${formatPrice(property.price)} / year` : formatPrice(property.price);
+  return property.purpose === "rent"
+    ? `${formatPrice(property.price)} / year`
+    : formatPrice(property.price);
 }
 
 /** Capitalises the first letter of a word, e.g. "duplex" -> "Duplex". */
@@ -26,13 +28,16 @@ export function capitalize(word) {
 }
 
 /** Attaches a fallback so a broken image never leaves a blank box. */
-export function withImageFallback(imgEl, fallbackSrc = "assets/images/placeholder.svg") {
+export function withImageFallback(
+  imgEl,
+  fallbackSrc = "assets/images/placeholder.svg",
+) {
   imgEl.addEventListener(
     "error",
     () => {
       imgEl.src = fallbackSrc;
     },
-    { once: true }
+    { once: true },
   );
   return imgEl;
 }
@@ -40,7 +45,7 @@ export function withImageFallback(imgEl, fallbackSrc = "assets/images/placeholde
 /** Placeholder company WhatsApp number — replace with the real line. */
 export const COMPANY_WHATSAPP = "2348000000000";
 export const COMPANY_PHONE = "+234 800 000 0000";
-export const COMPANY_EMAIL = "hello@ochierealty.ng";
+export const COMPANY_EMAIL = "hello@UrbanNestrealty.ng";
 export const COMPANY_ADDRESS = "12 Enugu Road, Awka, Anambra State, Nigeria";
 
 /** Builds a wa.me link pre-filled with an inquiry message about a property. */
@@ -50,7 +55,9 @@ export function buildWhatsAppLink(message) {
 
 /** Reads the current page's URLSearchParams as a plain object. */
 export function getUrlParams() {
-  return Object.fromEntries(new URLSearchParams(window.location.search).entries());
+  return Object.fromEntries(
+    new URLSearchParams(window.location.search).entries(),
+  );
 }
 
 /** Escapes text before inserting into innerHTML, to avoid markup injection. */

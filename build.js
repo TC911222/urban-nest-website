@@ -41,13 +41,13 @@ properties.forEach((property) => {
 
   // A. Replace the Title
   html = html.replace(
-    "<title>Property Details | Ochie Realty</title>",
-    `<title>${property.title} | Ochie Realty in ${property.location.area}, Awka</title>`,
+    "<title>Property Details | UrbanNest Realty</title>",
+    `<title>${property.title} | UrbanNest Realty in ${property.location.area}, Awka</title>`,
   );
 
   // B. Replace the Meta Description
   html = html.replace(
-    '<meta name="description" content="View detailed information, photos and features for this property listed by Ochie Realty in Awka, Anambra State." />',
+    '<meta name="description" content="View detailed information, photos and features for this property listed by UrbanNest Realty in Awka, Anambra State." />',
     `<meta name="description" content="${description}" />`,
   );
 
@@ -59,7 +59,7 @@ properties.forEach((property) => {
 
   // D. Inject Open Graph (OG) Tags
   const ogTags = `
-  <meta property="og:title" content="${property.title} | Ochie Realty" />
+  <meta property="og:title" content="${property.title} | UrbanNest Realty" />
   <meta property="og:description" content="${property.description.substring(0, 150)}..." />
   <meta property="og:image" content="${property.images.cover}" />
   <meta property="og:url" content="${pageUrl}" />

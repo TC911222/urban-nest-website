@@ -14,13 +14,13 @@ export function renderFooter() {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="footer-logo">Ochie&nbsp;Realty</div>
+          <div class="footer-logo">UrbanNest&nbsp;Realty</div>
           <p>Helping people in Awka and its surrounding communities find homes, land and commercial spaces they can trust.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Ochie Realty on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Ochie Realty on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Chat with Ochie Realty on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="#" aria-label="Ochie Realty on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="#" aria-label="UrbanNest Realty on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="UrbanNest Realty on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Chat with UrbanNest Realty on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="#" aria-label="UrbanNest Realty on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export function renderFooter() {
       </div>
 
       <div class="footer-bottom">
-        &copy; ${year} Ochie Realty. All rights reserved
+        &copy; ${year} UrbanNest Realty. All rights reserved
       </div>
     </div>
   `;

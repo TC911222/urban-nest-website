@@ -1,4 +1,4 @@
-# Ochie Realty — Real Estate Website
+# UrbanNest Realty — Real Estate Website
 
 A complete, responsive real-estate website for a fictional company operating in
 Awka, Anambra State, Nigeria. Built with plain HTML5, CSS3 and vanilla
@@ -6,13 +6,13 @@ JavaScript (ES modules) — no frameworks.
 
 ## Pages
 
-| Page                    | Purpose                                                        |
-| ------------------------ | --------------------------------------------------------------- |
-| `index.html`             | Homepage — hero search, featured listings, categories, trust section |
-| `properties.html`        | Search & filter every listing, with sorting and URL-shareable filters |
-| `property-details.html`  | Single reusable page for any listing, loaded via `?id=property-001` |
-| `about.html`             | Company story, mission/vision, values, team                     |
-| `contact.html`           | Contact details + validated inquiry form                        |
+| Page                    | Purpose                                                               |
+| ----------------------- | --------------------------------------------------------------------- |
+| `index.html`            | Homepage — hero search, featured listings, categories, trust section  |
+| `properties.html`       | Search & filter every listing, with sorting and URL-shareable filters |
+| `property-details.html` | Single reusable page for any listing, loaded via `?id=property-001`   |
+| `about.html`            | Company story, mission/vision, values, team                           |
+| `contact.html`          | Contact details + validated inquiry form                              |
 
 There is **one** `property-details.html`, not one file per property.
 JavaScript reads the `id` query parameter and renders the matching listing

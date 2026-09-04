@@ -21,8 +21,8 @@ export function renderNavbar(activePage) {
 
   mount.innerHTML = `
     <div class="container">
-      <a href="index.html" class="nav-logo" aria-label="Ochie Realty home">
-        <span class="logo-main">Ochie&nbsp;Realty</span>
+      <a href="index.html" class="nav-logo" aria-label="UrbanNest Realty home">
+        <span class="logo-main">UrbanNest&nbsp;Realty</span>
         <span class="logo-sub">AWKA · ANAMBRA</span>
       </a>
 

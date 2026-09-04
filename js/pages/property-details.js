@@ -33,7 +33,7 @@ function getPropertyIdFromUrl() {
 }
 
 function setSeoTags(property) {
-  document.title = `${property.title} in ${property.location.area}, Awka | Ochie Realty`;
+  document.title = `${property.title} in ${property.location.area}, Awka | UrbanNest Realty`;
 
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) {

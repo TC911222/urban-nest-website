@@ -6,19 +6,19 @@
 
 const team = [
   {
-    name: "Ochie Nwosu",
+    name: "UrbanNest Nwosu",
     role: "Founder & Managing Director",
-    photo: "assets/images/about/profile-1.jpg",
+    photo: "assets/images/about/profile-1.webp",
   },
   {
     name: "Adaeze Chukwu",
     role: "Head of Sales",
-    photo: "assets/images/about/profile2.jpg",
+    photo: "assets/images/about/profile2.webp",
   },
   {
     name: "Emeka Obi",
     role: "Client Relations Lead",
-    photo: "assets/images/about/profile3.jpg",
+    photo: "assets/images/about/profile3.webp",
   },
 ];
 
